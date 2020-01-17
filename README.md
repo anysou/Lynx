@@ -80,11 +80,11 @@ To be able to show LynxActivity shaking your phone or starting it programaticall
 ```
 
 If you have to support applications based on Android 2.X you'll have to add ``READ_LOG`` permission to your AndroidManifest. **This is not needed for newer Android versions.**
+如果必须支持基于Android 2.X的应用程序，则必须向AndroidManifest添加“READ_LOG”权限。**对于较新的Android版本，这是不需要的**
 
 ```xml
 
 <uses-permission android:name="android.permission.READ_LOGS"/>
-如果必须支持基于Android 2.X的应用程序，则必须向AndroidManifest添加“READ_LOG”权限。**对于较新的Android版本，这是不需要的**
 
 ```
 
