@@ -2,18 +2,21 @@ Lynx [![Build Status](https://travis-ci.org/pedrovgs/Lynx.svg?branch=master)](ht
 ====
 
 Are you bored of connect your device to your computer to know what's happening inside your app? If you hate it, this is going to be your favorite library. Shake your phone, press a button or add a ``LynxView`` to your layouts and you'll see what Andoird logcat is printing :)
+你厌倦了把你的设备连接到你的电脑来知道你的应用程序内部发生了什么吗？如果你不喜欢，这将是你最喜欢的这个库类。就在你的手机里，按一个按钮或在你的布局中添加一个“LynxView”，你就会看到Andoird logcat正在打印什么：）
 
 Lynx is an Android library created to show a custom view with all the information logcat is printing, different traces of different levels will be rendererd to show from log messages to your application exceptions. You can filter this traces (using regular expressions if you want), share your logcat to other apps, configure the max number of traces to show or the sampling rate used by the library. The min Api Level supported is 10.
+Lynx是一个Android库，用于显示一个自定义视图，其中包含logcat正在打印的所有信息，不同级别的不同跟踪将被渲染以显示从日志消息到应用程序异常的信息。您可以筛选此跟踪（如果需要，可以使用正则表达式），将您的logcat共享给其他应用程序，配置要显示的最大跟踪数或库使用的采样率。支持的最小Api级别为10。
 
-Screenshots
+Screenshots 屏幕截图
 -----------
 
 ![Demo Screenshot][1]
 
-Usage
+Usage 用法
 -----
 
 To use Lynx Android library and get your logcat inside your app you **can use different approaches**:
+要使用Lynx Android库并让logcat进入应用程序，您**可以使用不同的方法**
 
 * 1. Start ``LynxActivity`` using a ``LynxConfig`` object.
 
@@ -60,13 +63,15 @@ public class YourApplication extends Application {
 ```
 
 You can **provide different configurations based on styleable attributes**:
+您可以**根据可设置样式的属性提供不同的配置**：
 
-* Filter to apply by default: ``lynx:filter="Lynx"``
-* Max number of traces to show inside LynxView: ``lynx:max_traces_to_show=3000``
-* Text size used to render traces inside LynxView: ``lynx:text_size="12sp``
-* Sampling rate used to read from the application log: ``lynx:sampling_rate=200``
+* Filter to apply by default: ``lynx:filter="Lynx"`` （默认过滤设置）
+* Max number of traces to show inside LynxView: ``lynx:max_traces_to_show=3000`` （最大显示条数）
+* Text size used to render traces inside LynxView: ``lynx:text_size="12sp`` （显示字体大小）
+* Sampling rate used to read from the application log: ``lynx:sampling_rate=200``（读取应用程序日志的采样率）
 
 To be able to show LynxActivity shaking your phone or starting it programatically you'll have to add LynxActivity to your AndroidManifest.
+为了能够显示LynxActivity应用你的手机或启动它的程序，你将不得不添加LynxActivity到你的AndroidManifest。
 
 ```xml
 
@@ -79,11 +84,12 @@ If you have to support applications based on Android 2.X you'll have to add ``RE
 ```xml
 
 <uses-permission android:name="android.permission.READ_LOGS"/>
+如果必须支持基于Android 2.X的应用程序，则必须向AndroidManifest添加“READ_LOG”权限。**对于较新的Android版本，这是不需要的**
 
 ```
 
 
-Add it to your project
+Add it to your project 添加到你的项目中
 ----------------------
 
 
