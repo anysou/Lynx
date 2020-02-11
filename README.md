@@ -96,7 +96,7 @@ Add it to your project 添加到你的项目中
 ----------------------
 
 首先：在项目的genbuild.gradle- > allprojects（所有项目）-> repositories（仓库）中添加GitHub的仓库地址https://jitpack.io
-```
+    ```
     allprojects {
     	repositories {
     		...
@@ -106,12 +106,12 @@ Add it to your project 添加到你的项目中
     ```
     
 Add Lynx dependency to your build.gradle
-1、在你的项目根 build.gradle 文件里添加
+在你引用的项目 build.gradle 文件里添加
 
 ```groovy
 
 dependencies{
-    compile 'com.github.pedrovgs:lynx:1.1.0'
+    implementation 'com.github.pedrovgs:lynx:1.1.0'
 }
 
 ```
