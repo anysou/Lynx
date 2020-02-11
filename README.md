@@ -19,6 +19,7 @@ To use Lynx Android library and get your logcat inside your app you **can use di
 要使用Lynx Android库并让logcat进入应用程序，您**可以使用不同的方法**
 
 * 1. Start ``LynxActivity`` using a ``LynxConfig`` object.
+  1. 直接启动 LynxActivity  同时配置 LynxConfig
 
 ```java
 
@@ -34,6 +35,7 @@ private void openLynxActivity() {
 ```
 
 * 2. Configure ``LynxShakeDetector`` to start ``LynxActivity`` if you **shake your phone**.
+  2. 在Application 的 onCreate() 里初始化 LynxShakeDetector
 
 ```java
 
@@ -49,6 +51,7 @@ public class YourApplication extends Application {
 ```
 
 * 3. Add ``LynxView`` **to your layouts** and configure it as you wish.
+  3. 添加 “LynxView.xml” 到你的 layout 里
 
 ```xml
 
@@ -92,8 +95,18 @@ If you have to support applications based on Android 2.X you'll have to add ``RE
 Add it to your project 添加到你的项目中
 ----------------------
 
-
+首先：在项目的genbuild.gradle- > allprojects（所有项目）-> repositories（仓库）中添加GitHub的仓库地址https://jitpack.io
+```
+    allprojects {
+    	repositories {
+    		...
+    		maven { url 'https://jitpack.io' }
+        }
+    }
+    ```
+    
 Add Lynx dependency to your build.gradle
+1、在你的项目根 build.gradle 文件里添加
 
 ```groovy
 
@@ -104,6 +117,7 @@ dependencies{
 ```
 
 Or add Lynx as a new dependency inside your pom.xml
+或者在pom.xml中添加Lynx作为新的依赖项
 
 ```xml
 
